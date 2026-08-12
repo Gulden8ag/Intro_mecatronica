@@ -1,4 +1,5 @@
-site_name: Plantilla para Documentación
+site_name: Introducción a la Mecatrónica
+site_description: Curso de Introducción a la Mecatrónica — IBERO Puebla
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -6,7 +7,13 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.critic:
       mode: view
   - pymdownx.caret
@@ -23,18 +30,38 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
-# Use the ReadTheDocs theme
 theme:
   name: material
-  highlightjs: true 
   palette:
-      - scheme: default
-        primary: red
-
+    - scheme: default
+      primary: red
   features:
     - content.code.copy
     - content.tooltips
+    - navigation.sections
 extra_css:
   - https://use.fontawesome.com/releases/v6.5.2/css/all.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
-
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - Inicio: index.md
+  - Syllabus: Syllabus.md
+  - "M0 · Portafolio web":
+      - "Comandos de Markdown": M0_Portafolio_web/comandos.md
+      - "Comandos de Git": M0_Portafolio_web/gitcmds.md
+      - "Plantilla de bitácora": M0_Portafolio_web/ejemplo.md
+  - "M1 · Electrónica y MCU":
+      - "Tema 1 · Electrónica": M1_Electronica/tema1.md
+      - "Tema 2 · MCU (ESP32)": M1_Electronica/tema2.md
+      - "Tema 3 · Actuadores": M1_Electronica/tema3.md
+      - "Tema 4 · Sensores": M1_Electronica/tema4.md
+  - "M2 · Control y Visión":
+      - "Tema 5 · Mecanismos": M2_Control/tema5.md
+      - "Tema 6 · Visión 101": M2_Control/tema6.md
+      - "Tema 7 · Control PID": M2_Control/tema7.md
+      - "Tema 8 · Visión 102 (cierre de lazo)": M2_Control/tema8.md
+  - Proyectos:
+      - "Proyecto 1 · Carro RC": Proyectos/P1.md
+      - "Proyecto Final · VSSS": Proyectos/P2.md

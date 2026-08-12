@@ -47,8 +47,6 @@ V = \frac{lectura}{4095} \times 3.3
 
 Un potenciómetro es un **resistor variable**: al girar la perilla mueves un contacto sobre una pista resistiva y formas un **divisor de voltaje**.
 
-![Potenciómetro como divisor](../recursos/imgs/pot_divisor.png){loading=lazy width="60%"}
-
 \[
 V_{out} = V_{cc} \cdot \frac{R_{abajo}}{R_{total}}
 \]
@@ -98,7 +96,7 @@ T~[°C] = V_{out} \times 100
 
 **Conexión:** viendo el lado plano del TO-92 de frente: izquierda = **+5 V (VIN)**, centro = **salida → GPIO 35**, derecha = **GND**. Si lo conectas al revés se calienta de inmediato — desconecta y revisa.
 
-![ESP32 con LM35](../recursos/imgs/esp32_lm35.png){loading=lazy width="60%"}
+![ESP32 con LM35](../recursos/imgs/esp32_lm35.jpg){loading=lazy width="60%"}
 
 ```cpp title="Lectura de temperatura (conversión teórica)"
 const int pinLM35 = 35;
@@ -204,7 +202,7 @@ El MPU6050 mide **aceleración en 3 ejes** (y giro, que hoy no usaremos). No es 
 | SDA | GPIO 21 |
 | SCL | GPIO 22 |
 
-![ESP32 con MPU6050](../recursos/imgs/esp32_mpu6050.png){loading=lazy width="60%"}
+![ESP32 con MPU6050](../recursos/imgs/esp32_mpu6050.webp){loading=lazy width="60%"}
 
 Instala la librería **Adafruit MPU6050** (Gestor de librerías; instala también sus dependencias cuando lo pida).
 

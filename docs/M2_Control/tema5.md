@@ -78,7 +78,7 @@ En una curva, la rueda exterior recorre **más distancia** que la interior: si a
 
 [Modelo](https://www.printables.com/model/1453110-educational-model-of-cycloidal-drive)
 
-![Cicloidal impreso](../recursos/imgs/mec_cicloidal.jpg){loading=lazy width="50%"}
+![Cicloidal impreso](../recursos/imgs/cycloidal.webp){loading=lazy width="50%"}
 
 Reducción **enorme en muy poco espacio**, con poco juego (backlash). Es el mecanismo favorito de las **articulaciones de robots industriales**.
 
@@ -88,7 +88,7 @@ Reducción **enorme en muy poco espacio**, con poco juego (backlash). Es el meca
 
 [Modelo](https://www.printables.com/model/1458401-educational-model-of-cardan-universal-joint)
 
-![Cardán impreso](../recursos/imgs/mec_cardan.jpg){loading=lazy width="50%"}
+![Cardán impreso](../recursos/imgs/universal.webp){loading=lazy width="50%"}
 
 Transmite rotación entre **ejes que forman un ángulo** (la flecha de transmisión de camionetas).
 
@@ -98,35 +98,68 @@ Transmite rotación entre **ejes que forman un ángulo** (la flecha de transmisi
 
 [Modelo](https://www.printables.com/model/1453149-educational-model-of-leaf-shutter)
 
-![Obturador impreso](../recursos/imgs/mec_obturador.jpg){loading=lazy width="50%"}
+![Obturador impreso](../recursos/imgs/shutter.webp){loading=lazy width="50%"}
 
 Varias láminas **sincronizadas por un solo anillo**: un movimiento de entrada, muchas salidas coordinadas. Es el mecanismo del diafragma/obturador de las cámaras fotográficas.
 
 **Conexión con visión:** el obturador controla el **tiempo de exposición**. ¿Recuerdas el *motion blur* que hace perder los marcadores ArUco cuando el carro va rápido? Es exactamente esto: exposición larga = imagen movida. La mecánica y la visión por computadora se tocan aquí.
 
-### Estación E · Set de engranes
+### Estación E1 · Transformar el movimiento
 
-[Set completo](https://www.printables.com/model/1427427-educational-gear-examples-2)
 
-![Set de engranes impreso](../recursos/imgs/mec_set_engranes.jpg){loading=lazy width="60%"}
 
-Ocho mecanismos en una mesa; para cada uno pregúntate: *¿qué transforma y dónde lo he visto?*
+
+<div class="grid" markdown>
+
+![Cremallera y piñón](../recursos/imgs/rack.webp){loading=lazy}
+
+![Cruz de Ginebra](../recursos/imgs/geneva.webp){loading=lazy}
+
+![Engrane intermitente](../recursos/imgs/inter.webp){loading=lazy}
+
+![Espiral de Arquímedes](../recursos/imgs/spiral.webp){loading=lazy}
+
+
+</div>
+
+La pregunta central de esta estación: **¿qué tipo de movimiento entra y cuál sale?**
 
 | Mecanismo | Qué hace | Dónde vive |
 | --- | --- | --- |
 | **Cremallera y piñón helicoidal** | Rotación → **traslación** | Dirección de los autos, ejes de impresoras 3D |
-| **Engrane interno helicoidal** | Reducción compacta, ejes al mismo lado | Trenes planetarios, cajas de bicicleta |
-| **Cónico espiral** | Cambia el eje de giro **90°** | Diferenciales, taladros angulares |
-| **Sinfín multi-hilo + corona** | Reducción grande en una etapa | Reductores de portones, afinadores de guitarra |
-| **Corona (crown gear)** | 90° con engrane plano | Batidoras, juguetes |
 | **Cruz de Ginebra** | Rotación continua → **intermitente** (avanza por pasos y se bloquea entre ellos) | Proyectores de cine, indexadores, relojería |
+| **Engrane intermitente** | Transmite solo en **parte del giro** (sin bloqueo entre pasos) | Contadores mecánicos, temporizadores |
 | **Espiral de Arquímedes** | Relación de transmisión **variable** durante la vuelta | Levas, mecanismos de retorno rápido |
-| **Engrane intermitente** | Transmite solo en parte del giro | Contadores mecánicos, temporizadores |
 
-**Dos preguntas obligadas en esta estación:**
+**Pruébalos en pareja:** gira la Ginebra y el intermitente uno junto al otro a la misma velocidad — los dos producen movimiento "a ratos", pero uno **se bloquea** entre pasos y el otro queda **libre**. ¿En qué aplicación importaría esa diferencia?
 
-1. **Sinfín:** intenta mover la corona empujándola directamente (con el sinfín acoplado). ¿Se deja? Esa propiedad se llama **autobloqueo** — el sinfín puede mover a la corona, pero la corona no puede mover al sinfín. ¿Para qué sirve eso en un robot? (Pista: sostener una carga sin gastar energía.)
-2. **Cruz de Ginebra:** si la cruz tiene \( n \) ranuras, ¿cuántas vueltas del impulsor necesita para dar una vuelta completa? ¿Cuántos grados avanza por "paso"?
+**Pregunta obligada (Ginebra):** si la cruz tiene \( n \) ranuras, ¿cuántas vueltas del impulsor necesita para dar una vuelta completa? ¿Cuántos grados avanza por "paso"?
+
+### Estación E2 · Redirigir y reducir
+
+<div class="grid" markdown>
+
+![Cónico espiral](../recursos/imgs/bevel.webp){loading=lazy}
+
+![Corona](../recursos/imgs/crown.webp){loading=lazy}
+
+![Engrane interno helicoidal](../recursos/imgs/internal.webp){loading=lazy}
+
+![Sinfín multi-hilo + corona](../recursos/imgs/wormwheel.webp){loading=lazy}
+
+</div>
+La pregunta central de esta estación: **¿cuánto reduce, hacia dónde saca el giro, y se puede mover al revés?**
+
+| Mecanismo | Qué hace | Dónde vive |
+| --- | --- | --- |
+| **Cónico espiral** | Cambia el eje de giro **90°** | Diferenciales, taladros angulares |
+| **Corona (crown gear)** | 90° con engrane plano | Batidoras, juguetes |
+| **Engrane interno helicoidal** | Reducción compacta, ejes al mismo lado y **mismo sentido** de giro | Trenes planetarios, cajas de bicicleta |
+| **Sinfín multi-hilo + corona** | Reducción **grande en una sola etapa** | Reductores de portones, afinadores de guitarra |
+
+**Pruébalos comparando:** cuenta dientes y estima la relación \( i \) de cada uno — en esta mesa hay desde relaciones cercanas a 1:1 hasta la más grande de todo el taller. ¿Cuál da más reducción por centímetro cúbico?
+
+**Pregunta obligada (sinfín):** intenta mover la corona empujándola directamente (con el sinfín acoplado). ¿Se deja? Esa propiedad se llama **autobloqueo** — el sinfín puede mover a la corona, pero la corona no puede mover al sinfín. ¿Para qué sirve eso en un robot? (Pista: sostener una carga sin gastar energía.)
 
 ---
 
@@ -140,7 +173,8 @@ Copia esta tabla en tu bitácora, una fila por estación:
 | B · Cicloidal | | | | | |
 | C · Cardán | | | | | |
 | D · Obturador | | | | | |
-| E · (elige 3 del set) | | | | | |
+| E1 · (elige 2 de la mesa) | | | | | |
+| E2 · (elige 2 de la mesa) | | | | | |
 
 ---
 
