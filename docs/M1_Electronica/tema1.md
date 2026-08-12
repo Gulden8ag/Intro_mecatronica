@@ -283,19 +283,7 @@ Es decir: un parpadeo visible de ~0.7 veces por segundo, casi simétrico. Si cam
 
 [Calculadora 555 astable](https://www.digikey.com.mx/es/resources/conversion-calculators/conversion-calculator-555-timer) — úsala para **verificar** tu cálculo a mano, no para sustituirlo.
 
-### 8.4 Conexión (paso a paso)
-1. Coloca el **NE555** en la protoboard, centrado en el canal. Identifica **pin 1 (GND)** y **pin 8 (Vcc)** por la muesca/punto.
-2. **Alimentación:** Pin 8 a **+5 V** y pin 1 a **GND**.
-3. **Reset:** Pin 4 a **+5 V**.
-4. **Control:** Pin 5 a GND mediante **10 nF**.
-5. **Temporización:**
-   - Conecta \( R_A \) entre **Vcc (5 V)** y **pin 7 (DISCH)**.
-   - Conecta \( R_B \) entre **pin 7 (DISCH)** y **pin 2/6** (TRIG/THRES unidos).
-   - Conecta el **capacitor C** entre **pin 2/6** y **GND** (si es electrolítico, lado **−** a GND).
-6. **Salida:** Pin 3 → **resistor 330 Ω** → **LED** → **GND** (cátodo a GND).
-7. Revisa todo con **continuidad** antes de energizar.
-
-### 8.5 Medición y comparación (el entregable)
+### 8.4 Medición y comparación (el entregable)
 
 Con el circuito funcionando, llena esta tabla en tu bitácora:
 
@@ -314,7 +302,7 @@ Con el circuito funcionando, llena esta tabla en tu bitácora:
 !!! question "Para tu reflexión en la bitácora"
     ¿Por qué no dio exacto? Pista: la **tolerancia** de los resistores (±5 %) y sobre todo la de los capacitores electrolíticos (¡puede ser −20 %/+80 %!). ¿Cuál de las dos domina el error?
 
-### 8.6 Lista de verificación (debug)
+### 8.5 Lista de verificación (debug)
 
 Si no parpadea, revisa en este orden:
 
@@ -351,10 +339,6 @@ t = 1.1 \times 100000 \times 10\times10^{-6} = 1.1~s
 ### 9.3 Conexión
 
 Parte del circuito astable y haz estos cambios:
-
-1. **Temporización:** \( R \) entre **Vcc** y **pines 6/7 unidos** (THRES + DISCH); \( C \) entre **pines 6/7** y **GND**.
-2. **Disparo:** Pin 2 (TRIG) con resistor **pull-up de 10 kΩ** a Vcc, y un **botón** de pin 2 a **GND**. Al presionar, TRIG baja de 1/3 Vcc y arranca el pulso.
-3. La salida (pin 3) mantiene el LED encendido exactamente \( t_{pulso} \) segundos y se apaga solo.
 
 ![555 monoestable](../recursos/imgs/555_mono.png){loading=lazy}
 
