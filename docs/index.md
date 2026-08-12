@@ -1,14 +1,20 @@
-# Documentación del Proyecto
+# **Introducción a la Mecatrónica (11192)**
 
-Bienvenido 👋  
-Esta es una **plantilla** basada en [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) para cursos y proyectos.
+
+## **Descripcion del Curso**
+
+TODO
 
 ---
 
-## Empezar rápido (3 pasos)
+## **Información del Curso**
 
-1. **Edita el nombre del sitio** en `mkdocs.yml`:
-   ```yaml
-   site_name: Documentación del Curso
-   theme:
-     name: material
+**Instructor**: Oliver Ochoa Garcia
+
+**Contacto**: oliver.ochoa2@iberopuebla.mx
+
+**Departmento**: Departmento de ciencias e ingenierías
+
+**Creditos**: 4
+
+**Prerequisitos**: N/A
