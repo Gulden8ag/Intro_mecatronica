@@ -1,5 +1,11 @@
 # MCU 101
 
+> Objetivo: Configurar el entorno de desarrollo del ESP32, controlar entradas y salidas digitales (LED, botón con pull-up y antirrebote) y establecer comunicación **Bluetooth** con un protocolo de comandos — la base del cerebro y el control remoto de tu carro.
+
+!!! note "Este tema cubre dos sesiones"
+    **Sesión 3** — GPIO: entorno, blink, botón y antirrebote. **Sesión 6** — Bluetooth: enlace serial y protocolo de comandos. Cada una tiene sus propios entregables (al final).
+
+
 **Materiales y software**
 
 - **Tarjeta**: ESP32 DevKit V1 (WROOM-32). **Importante:** debe ser ESP32 “clásico”; las variantes S3/C3 **no tienen Bluetooth Classic** y los ejemplos de `BluetoothSerial` no compilan en ellas.
@@ -315,3 +321,21 @@ void loop() {
 !!! tip "En la app de terminal Bluetooth"
     Configura la app para que agregue **Newline (\n)** al final de cada envío
     (en “Serial Bluetooth Terminal”: Settings → Send → Newline = LF).
+
+---
+
+## Entregables · Sesión 3 (GPIO) — van al portafolio
+
+1. **Foto del blink funcionando** + captura del IDE compilando sin errores.
+2. **Demo del toggle con antirrebote** (video corto o GIF).
+3. Explicación **con tus palabras** (3–4 líneas): qué es el rebote de un botón y por qué con `INPUT_PULLUP` la lógica queda invertida.
+4. **Link al repositorio** con el código comentado y un README breve de conexiones.
+5. Una falla resuelta (síntoma → cómo la encontré → solución).
+
+## Entregables · Sesión 6 (Bluetooth) — van al portafolio
+
+1. **Tabla del protocolo de comandos**: comando → acción (esta tabla luego se copia al README de tu carro).
+2. **Video controlando el LED (o un motor) desde el celular** por Bluetooth.
+3. Captura de la terminal BT con comandos enviados y recibidos.
+4. Nota del experimento: ¿qué se siente la latencia **con** `delay(1000)` en el loop vs. **sin** delay? (Pruébalo a propósito.)
+5. Una falla resuelta.

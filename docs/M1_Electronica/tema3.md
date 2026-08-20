@@ -1,4 +1,14 @@
 # Actuadores 101
+
+> Objetivo: Controlar un motor DC con puente H (sentido de giro y velocidad por PWM) y un servo, midiendo corriente y comportamiento bajo carga — los músculos de tu carro.
+
+**Materiales**
+
+- ESP32 DevKit V1 + protoboard y jumpers.
+- Driver **TB6612** (puente H) y 1–2 motores DC TT con caja reductora.
+- Servo SG90 (o similar), potenciómetro de 10 kΩ.
+- Fuente/batería para motores **separada** del ESP32 (con GND común) y multímetro.
+
 Conceptos clave
 
 - **Frecuencia (Hz)**: cuántas veces por segundo se repite el ciclo.
@@ -216,3 +226,12 @@ int salida = map(entrada, inMin, inMax, outMin, outMax);
 delay(ms);                 // Retraso en milisegundos
 ```
 
+---
+
+## Entregables de la sesión (van al portafolio)
+
+1. **Video del motor en ambos sentidos y 3+ velocidades** por PWM.
+2. **Tabla: valor PWM (0–255) vs. comportamiento observado.** Incluye el dato clave: ¿desde qué PWM arranca el motor? Ese es tu **PWM mínimo** — apúntalo, lo vas a usar en el carro.
+3. **Corriente medida** en arranque y en giro libre (multímetro **en serie**).
+4. Demo del **servo** en 3 posiciones con su cálculo de duty.
+5. Una falla resuelta (síntoma → cómo la encontré → solución).
