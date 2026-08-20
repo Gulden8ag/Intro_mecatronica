@@ -1,0 +1,1686 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../../M1_Electronica/tema4/">
+      
+      
+        <link rel="next" href="../tema6/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tema 5 · Mecanismos - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mecanismos-101" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 5 · Mecanismos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M0 · Portafolio web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    M0 · Portafolio web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M0_Portafolio_web/comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos de Markdown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M0_Portafolio_web/gitcmds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos de Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M0_Portafolio_web/ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plantilla de bitácora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M1 · Electrónica y MCU
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    M1 · Electrónica y MCU
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 1 · Electrónica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 2 · MCU (ESP32)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 3 · Actuadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 4 · Sensores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M2 · Control y Visión
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    M2 · Control y Visión
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 5 · Mecanismos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 5 · Mecanismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-por-que-mecanismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Por qué mecanismos?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptos-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conceptos base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Conceptos base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-palancas-la-maquina-mas-antigua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Palancas (la máquina más antigua)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-biela-manivela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Biela-manivela
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-relacion-de-transmision-la-formula-del-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Relación de transmisión (la fórmula del día)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-taller-de-estaciones-los-modelos-impresos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Taller de estaciones (los modelos impresos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Taller de estaciones (los modelos impresos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estacion-a-diferencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación A · Diferencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-b-reductor-cicloidal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación B · Reductor cicloidal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-c-junta-cardan-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación C · Junta cardán (universal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-d-obturador-de-laminas-leaf-shutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación D · Obturador de láminas (leaf shutter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-e1-transformar-el-movimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación E1 · Transformar el movimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-e2-redirigir-y-reducir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación E2 · Redirigir y reducir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ficha-de-estacion-llenala-en-cada-una" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ficha de estación (llénala en cada una)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-hoja-de-ejercicios-el-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Hoja de ejercicios (el entregable)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mini-prototipo-para-quien-quiera-ir-mas-alla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Mini-prototipo (para quien quiera ir más allá)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-entregables-de-la-sesion-van-al-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Entregables de la sesión (van al portafolio)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Entregables de la sesión (van al portafolio)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glosario-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tema6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 6 · Visión 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tema7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 7 · Control PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tema8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 8 · Visión 102 (cierre de lazo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/P1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1 · Carro RC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/P2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Final · VSSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-por-que-mecanismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Por qué mecanismos?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptos-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conceptos base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Conceptos base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-palancas-la-maquina-mas-antigua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Palancas (la máquina más antigua)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-biela-manivela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Biela-manivela
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-relacion-de-transmision-la-formula-del-dia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Relación de transmisión (la fórmula del día)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-taller-de-estaciones-los-modelos-impresos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Taller de estaciones (los modelos impresos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Taller de estaciones (los modelos impresos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estacion-a-diferencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación A · Diferencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-b-reductor-cicloidal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación B · Reductor cicloidal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-c-junta-cardan-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación C · Junta cardán (universal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-d-obturador-de-laminas-leaf-shutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación D · Obturador de láminas (leaf shutter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-e1-transformar-el-movimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación E1 · Transformar el movimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estacion-e2-redirigir-y-reducir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estación E2 · Redirigir y reducir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ficha-de-estacion-llenala-en-cada-una" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ficha de estación (llénala en cada una)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-hoja-de-ejercicios-el-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Hoja de ejercicios (el entregable)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mini-prototipo-para-quien-quiera-ir-mas-alla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Mini-prototipo (para quien quiera ir más allá)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-entregables-de-la-sesion-van-al-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Entregables de la sesión (van al portafolio)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Entregables de la sesión (van al portafolio)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glosario-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario rápido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mecanismos-101">Mecanismos 101</h1>
+<blockquote>
+<p>Objetivo: Entender cómo los mecanismos <strong>transforman el movimiento</strong> (velocidad ↔ par, rotación ↔ traslación, continuo ↔ intermitente), calcular relaciones de transmisión simples y aplicarlo al tren motriz del carro — tocando mecanismos reales en un taller de estaciones.</p>
+</blockquote>
+<hr />
+<h2 id="1-por-que-mecanismos">1. ¿Por qué mecanismos?</h2>
+<p>Un motor DC "pelón" gira <strong>muy rápido y con muy poco par</strong>: no puede mover casi nada directamente. Los mecanismos son el intercambio de moneda de la mecánica:</p>
+<blockquote>
+<p><strong>Sacrificas velocidad para ganar fuerza (o al revés), o cambias el tipo de movimiento.</strong></p>
+</blockquote>
+<p>Tu carro es el ejemplo perfecto: los motores amarillos "TT" que usamos traen una <strong>caja reductora interna de ~1:48</strong> — el motorcito de adentro gira ~9600 rpm y la rueda sale a ~200 rpm, pero con 48 veces más par. Sin esa caja, el carro no se movería.</p>
+<pre class="mermaid"><code>flowchart LR
+  M[Motor&lt;br&gt;rápido, débil] --&gt; T[Transmisión&lt;br&gt;engranes, bandas...] --&gt; S[Salida&lt;br&gt;lenta, fuerte]</code></pre>
+<hr />
+<h2 id="2-conceptos-base">2. Conceptos base</h2>
+<h3 id="21-palancas-la-maquina-mas-antigua">2.1 Palancas (la máquina más antigua)</h3>
+<div class="arithmatex">\[
+F_1 \cdot d_1 = F_2 \cdot d_2
+\]</div>
+<p>La <strong>ventaja mecánica</strong> es la relación de brazos: brazo largo del lado de tu esfuerzo = menos fuerza necesaria (pero más recorrido). Las tres clases se distinguen por dónde está el punto de apoyo (fulcro) respecto a la carga y el esfuerzo — tijeras, carretilla y pinzas son una de cada clase.</p>
+<h3 id="22-biela-manivela">2.2 Biela-manivela</h3>
+<p>Convierte <strong>rotación ↔ traslación</strong>: es el corazón del motor de combustión (pistón → cigüeñal) y de mecanismos de vaivén. Obsérvalo: la velocidad del extremo <strong>no es constante</strong> aunque la manivela gire parejo — se detiene por completo en los extremos del recorrido.</p>
+<h3 id="23-relacion-de-transmision-la-formula-del-dia">2.3 Relación de transmisión (la fórmula del día)</h3>
+<p>Para dos engranes acoplados con <span class="arithmatex">\( Z_1 \)</span> dientes (entrada) y <span class="arithmatex">\( Z_2 \)</span> dientes (salida):</p>
+<div class="arithmatex">\[
+i = \frac{Z_2}{Z_1} = \frac{\omega_{entrada}}{\omega_{salida}} = \frac{\tau_{salida}}{\tau_{entrada}}
+\]</div>
+<ul>
+<li><span class="arithmatex">\( i &gt; 1 \)</span>: <strong>reducción</strong> → sale más lento pero con más par.</li>
+<li><span class="arithmatex">\( i &lt; 1 \)</span>: <strong>multiplicación</strong> → sale más rápido pero con menos par.</li>
+<li>El par y la velocidad se intercambian: <span class="arithmatex">\( \omega_2 = \omega_1 / i \)</span> y <span class="arithmatex">\( \tau_2 = \tau_1 \cdot i \)</span> (menos las pérdidas por fricción).</li>
+</ul>
+<p><strong>Trenes compuestos:</strong> las relaciones se <strong>multiplican</strong>. Dos etapas de 1:4 dan 1:16. Así la caja del motor TT logra 1:48 en un espacio diminuto.</p>
+<p><strong>Ejemplo resuelto:</strong> piñón de 12 dientes mueve engrane de 36:</p>
+<div class="arithmatex">\[
+i = \frac{36}{12} = 3 \quad\Rightarrow\quad \text{la salida gira a } \tfrac{1}{3} \text{ de la velocidad, con } 3\times \text{ el par}
+\]</div>
+<hr />
+<h2 id="3-taller-de-estaciones-los-modelos-impresos">3. Taller de estaciones (los modelos impresos)</h2>
+<p>En el laboratorio hay <strong>mecanismos impresos en 3D, funcionales</strong>. Van a rotar en equipos por las estaciones. En cada una: <strong>muévelo con la mano</strong>, observa, y llena la ficha de la sección 4.</p>
+<div class="admonition info">
+<p class="admonition-title">Regla del taller</p>
+<p>Gíralos con suavidad — son PLA, no acero. Si algo se traba, no lo fuerces: observar <strong>por qué</strong> se traba también es aprender mecanismos.</p>
+</div>
+<h3 id="estacion-a-diferencial">Estación A · Diferencial</h3>
+<p><a href="https://www.printables.com/model/1457586-educational-model-of-differential-gear">Modelo</a></p>
+<p><img alt="Diferencial impreso" loading="lazy" src="../recursos/imgs/mec_diferencial.jpg" width="50%" /></p>
+<p>En una curva, la rueda exterior recorre <strong>más distancia</strong> que la interior: si ambas giraran igual, una tendría que patinar. El diferencial reparte el giro permitiendo velocidades distintas con un solo motor.</p>
+<p><strong>Pruébalo:</strong> detén una salida con el dedo mientras giras la entrada — ¿qué hace la otra rueda?</p>
+<p><strong>Conexión con tu carro:</strong> tu carro NO trae este mecanismo… porque tiene <strong>un motor por rueda</strong>: el "diferencial" lo hace el software al mandar <code>M,izq,der</code> con velocidades distintas. Se llama <strong>dirección diferencial</strong> (y este modelo te muestra el problema que resuelve).</p>
+<h3 id="estacion-b-reductor-cicloidal">Estación B · Reductor cicloidal</h3>
+<p><a href="https://www.printables.com/model/1453110-educational-model-of-cycloidal-drive">Modelo</a></p>
+<p><img alt="Cicloidal impreso" loading="lazy" src="../../recursos/imgs/cycloidal.webp" width="50%" /></p>
+<p>Reducción <strong>enorme en muy poco espacio</strong>, con poco juego (backlash). Es el mecanismo favorito de las <strong>articulaciones de robots industriales</strong>.</p>
+<p><strong>Pruébalo:</strong> cuenta cuántas vueltas de entrada necesitas para una vuelta de salida — esa es su relación <span class="arithmatex">\( i \)</span>. ¿Va en el mismo sentido la salida que la entrada?</p>
+<h3 id="estacion-c-junta-cardan-universal">Estación C · Junta cardán (universal)</h3>
+<p><a href="https://www.printables.com/model/1458401-educational-model-of-cardan-universal-joint">Modelo</a></p>
+<p><img alt="Cardán impreso" loading="lazy" src="../../recursos/imgs/universal.webp" width="50%" /></p>
+<p>Transmite rotación entre <strong>ejes que forman un ángulo</strong> (la flecha de transmisión de camionetas).</p>
+<p><strong>Pruébalo:</strong> gira la entrada a velocidad constante con el eje doblado y fíjate en la salida — <strong>no gira pareja</strong>: acelera y desacelera dos veces por vuelta. Entre más ángulo, peor. (Por eso las flechas reales usan cardán doble.)</p>
+<h3 id="estacion-d-obturador-de-laminas-leaf-shutter">Estación D · Obturador de láminas (leaf shutter)</h3>
+<p><a href="https://www.printables.com/model/1453149-educational-model-of-leaf-shutter">Modelo</a></p>
+<p><img alt="Obturador impreso" loading="lazy" src="../../recursos/imgs/shutter.webp" width="50%" /></p>
+<p>Varias láminas <strong>sincronizadas por un solo anillo</strong>: un movimiento de entrada, muchas salidas coordinadas. Es el mecanismo del diafragma/obturador de las cámaras fotográficas.</p>
+<p><strong>Conexión con visión:</strong> el obturador controla el <strong>tiempo de exposición</strong>. ¿Recuerdas el <em>motion blur</em> que hace perder los marcadores ArUco cuando el carro va rápido? Es exactamente esto: exposición larga = imagen movida. La mecánica y la visión por computadora se tocan aquí.</p>
+<h3 id="estacion-e1-transformar-el-movimiento">Estación E1 · Transformar el movimiento</h3>
+<div class="grid">
+<p><img alt="Cremallera y piñón" loading="lazy" src="../../recursos/imgs/rack.webp" /></p>
+<p><img alt="Cruz de Ginebra" loading="lazy" src="../../recursos/imgs/geneva.webp" /></p>
+<p><img alt="Engrane intermitente" loading="lazy" src="../../recursos/imgs/inter.webp" /></p>
+<p><img alt="Espiral de Arquímedes" loading="lazy" src="../../recursos/imgs/spiral.webp" /></p>
+</div>
+<p>La pregunta central de esta estación: <strong>¿qué tipo de movimiento entra y cuál sale?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mecanismo</th>
+<th>Qué hace</th>
+<th>Dónde vive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cremallera y piñón helicoidal</strong></td>
+<td>Rotación → <strong>traslación</strong></td>
+<td>Dirección de los autos, ejes de impresoras 3D</td>
+</tr>
+<tr>
+<td><strong>Cruz de Ginebra</strong></td>
+<td>Rotación continua → <strong>intermitente</strong> (avanza por pasos y se bloquea entre ellos)</td>
+<td>Proyectores de cine, indexadores, relojería</td>
+</tr>
+<tr>
+<td><strong>Engrane intermitente</strong></td>
+<td>Transmite solo en <strong>parte del giro</strong> (sin bloqueo entre pasos)</td>
+<td>Contadores mecánicos, temporizadores</td>
+</tr>
+<tr>
+<td><strong>Espiral de Arquímedes</strong></td>
+<td>Relación de transmisión <strong>variable</strong> durante la vuelta</td>
+<td>Levas, mecanismos de retorno rápido</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pruébalos en pareja:</strong> gira la Ginebra y el intermitente uno junto al otro a la misma velocidad — los dos producen movimiento "a ratos", pero uno <strong>se bloquea</strong> entre pasos y el otro queda <strong>libre</strong>. ¿En qué aplicación importaría esa diferencia?</p>
+<p><strong>Pregunta obligada (Ginebra):</strong> si la cruz tiene <span class="arithmatex">\( n \)</span> ranuras, ¿cuántas vueltas del impulsor necesita para dar una vuelta completa? ¿Cuántos grados avanza por "paso"?</p>
+<h3 id="estacion-e2-redirigir-y-reducir">Estación E2 · Redirigir y reducir</h3>
+<div class="grid">
+<p><img alt="Cónico espiral" loading="lazy" src="../../recursos/imgs/bevel.webp" /></p>
+<p><img alt="Corona" loading="lazy" src="../../recursos/imgs/crown.webp" /></p>
+<p><img alt="Engrane interno helicoidal" loading="lazy" src="../../recursos/imgs/internal.webp" /></p>
+<p><img alt="Sinfín multi-hilo + corona" loading="lazy" src="../../recursos/imgs/wormwheel.webp" /></p>
+</div>
+<p>La pregunta central de esta estación: <strong>¿cuánto reduce, hacia dónde saca el giro, y se puede mover al revés?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mecanismo</th>
+<th>Qué hace</th>
+<th>Dónde vive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cónico espiral</strong></td>
+<td>Cambia el eje de giro <strong>90°</strong></td>
+<td>Diferenciales, taladros angulares</td>
+</tr>
+<tr>
+<td><strong>Corona (crown gear)</strong></td>
+<td>90° con engrane plano</td>
+<td>Batidoras, juguetes</td>
+</tr>
+<tr>
+<td><strong>Engrane interno helicoidal</strong></td>
+<td>Reducción compacta, ejes al mismo lado y <strong>mismo sentido</strong> de giro</td>
+<td>Trenes planetarios, cajas de bicicleta</td>
+</tr>
+<tr>
+<td><strong>Sinfín multi-hilo + corona</strong></td>
+<td>Reducción <strong>grande en una sola etapa</strong></td>
+<td>Reductores de portones, afinadores de guitarra</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pruébalos comparando:</strong> cuenta dientes y estima la relación <span class="arithmatex">\( i \)</span> de cada uno — en esta mesa hay desde relaciones cercanas a 1:1 hasta la más grande de todo el taller. ¿Cuál da más reducción por centímetro cúbico?</p>
+<p><strong>Pregunta obligada (sinfín):</strong> intenta mover la corona empujándola directamente (con el sinfín acoplado). ¿Se deja? Esa propiedad se llama <strong>autobloqueo</strong> — el sinfín puede mover a la corona, pero la corona no puede mover al sinfín. ¿Para qué sirve eso en un robot? (Pista: sostener una carga sin gastar energía.)</p>
+<hr />
+<h2 id="4-ficha-de-estacion-llenala-en-cada-una">4. Ficha de estación (llénala en cada una)</h2>
+<p>Copia esta tabla en tu bitácora, una fila por estación:</p>
+<table>
+<thead>
+<tr>
+<th>Estación</th>
+<th>¿Qué transforma? (vel↔par, rot↔trasl, continuo↔intermitente, cambio de eje)</th>
+<th>Relación <span class="arithmatex">\( i \)</span> estimada (cuenta dientes o vueltas)</th>
+<th>¿Reversible o autobloqueante?</th>
+<th>¿Dónde lo has visto en la vida real?</th>
+<th>¿Dónde serviría en el carro o en un proyecto tuyo?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A · Diferencial</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B · Cicloidal</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C · Cardán</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D · Obturador</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>E1 · (elige 2 de la mesa)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>E2 · (elige 2 de la mesa)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-hoja-de-ejercicios-el-entregable">5. Hoja de ejercicios (el entregable)</h2>
+<p>Resuelve con procedimiento (no solo el resultado):</p>
+<p><strong>1. Tren simple.</strong> Un piñón de 10 dientes mueve un engrane de 40. Si el motor entrega 300 rpm y 0.1 N·m, ¿a qué velocidad y con qué par gira la salida? (Ignora pérdidas.)</p>
+<p><strong>2. Tren compuesto.</strong> Dos etapas: 12→36 dientes y luego 10→40 dientes. ¿Relación total? Si la entrada gira a 960 rpm, ¿la salida?</p>
+<p><strong>3. Sinfín.</strong> Un sinfín de <strong>2 hilos</strong> mueve una corona de 40 dientes. ¿Relación de transmisión? (Pista: en un sinfín, <span class="arithmatex">\( Z_1 \)</span> = número de hilos.) ¿Cuántas vueltas del sinfín para una de la corona?</p>
+<p><strong>4. Cruz de Ginebra.</strong> La del laboratorio tiene sus ranuras a la vista: cuéntalas y calcula grados por paso y vueltas del impulsor por vuelta completa de la cruz.</p>
+<p><strong>5. Tu carro (velocidad).</strong> El motor TT tiene reducción interna 1:48 y a 6 V la rueda gira ~200 rpm sin carga. Con ruedas de <strong>65 mm</strong> de diámetro:</p>
+<div class="arithmatex">\[
+v = \pi \cdot D \cdot \frac{rpm}{60}
+\]</div>
+<p>¿Cuál es la velocidad máxima teórica del carro en m/s? ¿Por qué en el piso real será menor?</p>
+<p><strong>6. Tu carro (dirección diferencial).</strong> Si la rueda izquierda va a 0.4 m/s, la derecha a 0.6 m/s y la separación entre ruedas es <span class="arithmatex">\( L = 0.12 \)</span> m:</p>
+<div class="arithmatex">\[
+v = \frac{v_{der} + v_{izq}}{2} \qquad \omega = \frac{v_{der} - v_{izq}}{L} \qquad R = \frac{v}{\omega}
+\]</div>
+<p>Calcula la velocidad del centro, la velocidad de giro y el radio de la curva que describe. <strong>Fíjate</strong>: estas son exactamente las ecuaciones detrás del <code>izq = v - w, der = v + w</code> que usa el script de visión del Tema 6 — la mezcla diferencial no era un truco de software, era cinemática.</p>
+<p><strong>7. Diseño.</strong> Quieres que tu carro sea el doble de "fuerte" para empujar la pelota en el torneo, aceptando ir a la mitad de velocidad. Propón una relación de engranes adicional entre motor y rueda y calcula la nueva velocidad máxima.</p>
+<hr />
+<h2 id="6-mini-prototipo-para-quien-quiera-ir-mas-alla">6. Mini-prototipo (para quien quiera ir más allá)</h2>
+<p>Con cartón, palitos y silicón — o en la impresora 3D de Proyectos 1 — construye <strong>un</strong> mecanismo de los que viste y móntalo en video funcionando. Ideas: una palanca con ventaja mecánica medible, una biela-manivela, un tren de dos engranes de cartón con relación 1:2 verificable contando vueltas.</p>
+<hr />
+<h2 id="7-entregables-de-la-sesion-van-al-portafolio">7. Entregables de la sesión (van al portafolio)</h2>
+<ol>
+<li><strong>Ficha de estaciones</strong> completa (sección 4), con fotos tuyas de los mecanismos.</li>
+<li><strong>Hoja de ejercicios</strong> resuelta con procedimiento (sección 5).</li>
+<li>(Opcional, cuenta como extra) <strong>Mini-prototipo</strong> con video corto funcionando.</li>
+</ol>
+<hr />
+<h3 id="glosario-rapido">Glosario rápido</h3>
+<ul>
+<li><strong>Relación de transmisión (i):</strong> cociente de velocidades entrada/salida; intercambia velocidad por par.</li>
+<li><strong>Reducción:</strong> salida más lenta y con más par que la entrada.</li>
+<li><strong>Backlash (juego):</strong> holgura entre dientes; se siente como "flojera" al invertir el giro.</li>
+<li><strong>Autobloqueo:</strong> el mecanismo transmite en un sentido pero no puede ser movido desde la salida (sinfín).</li>
+<li><strong>Movimiento intermitente:</strong> avance por pasos con bloqueo entre ellos (cruz de Ginebra).</li>
+<li><strong>Dirección diferencial:</strong> girar mediante velocidades distintas en cada rueda, sin ruedas direccionales.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

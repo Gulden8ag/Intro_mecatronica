@@ -1,0 +1,1551 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../P1/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Proyecto Final · VSSS - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proyecto-final-futbol-de-robots-vsss-simplificado" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proyecto Final · VSSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M0 · Portafolio web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    M0 · Portafolio web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M0_Portafolio_web/comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos de Markdown
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M0_Portafolio_web/gitcmds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos de Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M0_Portafolio_web/ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plantilla de bitácora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M1 · Electrónica y MCU
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    M1 · Electrónica y MCU
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 1 · Electrónica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 2 · MCU (ESP32)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 3 · Actuadores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M1_Electronica/tema4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 4 · Sensores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M2 · Control y Visión
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    M2 · Control y Visión
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M2_Control/tema5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 5 · Mecanismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M2_Control/tema6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 6 · Visión 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M2_Control/tema7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 7 · Control PID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M2_Control/tema8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tema 8 · Visión 102 (cierre de lazo)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1 · Carro RC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Final · VSSS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Final · VSSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-el-reto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. El reto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-niveles-de-logro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Niveles de logro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-marcadores-asignados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Marcadores asignados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Restricciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hitos-y-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Hitos y entregables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Hitos y entregables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sesion-15-kickoff-en-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sesión 15 — Kickoff (en clase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sesion-16-revision-de-avance-en-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sesión 16 — Revisión de avance (en clase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sesion-17-entrega-torneo-en-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sesión 17 — Entrega + Torneo (en clase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-el-torneo-vsss-inter-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. El torneo · VSSS inter-grupos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rubrica-de-evaluacion-100-pts-25-del-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Rúbrica de evaluación (100 pts → 25 % del curso)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-consejos-de-veteranos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Consejos de veteranos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-el-reto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. El reto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-niveles-de-logro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Niveles de logro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-marcadores-asignados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Marcadores asignados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Restricciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hitos-y-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Hitos y entregables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Hitos y entregables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sesion-15-kickoff-en-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sesión 15 — Kickoff (en clase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sesion-16-revision-de-avance-en-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sesión 16 — Revisión de avance (en clase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sesion-17-entrega-torneo-en-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sesión 17 — Entrega + Torneo (en clase)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-el-torneo-vsss-inter-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. El torneo · VSSS inter-grupos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rubrica-de-evaluacion-100-pts-25-del-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Rúbrica de evaluación (100 pts → 25 % del curso)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-consejos-de-veteranos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Consejos de veteranos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="proyecto-final-futbol-de-robots-vsss-simplificado">Proyecto Final · Fútbol de robots (VSSS simplificado)</h1>
+<blockquote>
+<p><strong>Peso en la calificación:</strong> 25 % del curso · <strong>Kickoff:</strong> Sesión 15 · <strong>Revisión de avance:</strong> Sesión 16 · <strong>Entrega + Torneo:</strong> Sesión 17</p>
+<p>El desarrollo se realiza <strong>fuera de clase</strong>; las sesiones 15, 16 y 17 son de arranque, revisión y entrega.</p>
+</blockquote>
+<hr />
+<h2 id="1-el-reto">1. El reto</h2>
+<p>En el Proyecto 1 ustedes manejaban. Ahora <strong>nadie maneja</strong>: el carro juega solo.</p>
+<p>Una cámara cenital ve la cancha, su software en la laptop detecta el carro (por su marcador ArUco) y la pelota (por color), calcula qué hacer y manda las velocidades por Bluetooth. Es la arquitectura de la categoría <strong>IEEE Very Small Size Soccer (VSSS)</strong> de la LARC — la competencia latinoamericana real — en versión simplificada: 1v1, con el carro que ya construyeron.</p>
+<pre class="mermaid"><code>flowchart LR
+  CAM[Cámara cenital] --&gt;|frame| PC[Laptop del equipo&lt;br&gt;ArUco + color + PID]
+  PC --&gt;|"M,izq,der" por BT| ESP[ESP32] --&gt; TB[TB6612] --&gt; M[Motores]
+  M --&gt;|el carro juega| CAM</code></pre>
+<p><strong>Equipos:</strong> los mismos del Proyecto 1, con <strong>el mismo carro</strong> (para eso fue el requisito R8: la superficie del marcador). Si su carro necesita cirugía, háganla — eso también es ingeniería.</p>
+<hr />
+<h2 id="2-niveles-de-logro">2. Niveles de logro</h2>
+<p>No todos los equipos llegarán igual de lejos, y está previsto. El proyecto se evalúa por <strong>niveles acumulativos</strong> — cada nivel incluye los anteriores:</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>El carro logra…</th>
+<th>Corresponde a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>N1 · Navegar</strong></td>
+<td>Llegar solo a un marcador objetivo (ID 0) y detenerse.</td>
+<td>Entregable del Tema 6</td>
+</tr>
+<tr>
+<td><strong>N2 · Cazar</strong></td>
+<td>Llegar solo a la <strong>pelota</strong> (detectada por color, sin marcador).</td>
+<td>Tema 4 + Tema 6</td>
+</tr>
+<tr>
+<td><strong>N3 · Anotar</strong></td>
+<td>Empujar la pelota y meter gol en <strong>portería vacía</strong> en ≤60 s (desde posición inicial estándar).</td>
+<td>Punto de aproximación</td>
+</tr>
+<tr>
+<td><strong>N4 · Competir</strong></td>
+<td>Jugar 1v1 contra otro carro autónomo en el torneo.</td>
+<td>El VSSS completo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>N1 es el mínimo</strong> para la revisión de la sesión 16. <strong>N2 es el boleto al torneo</strong>: quien no llegue a N2 hace una demostración cronometrada de su nivel máximo el día de la entrega — sigue habiendo evaluación digna, solo no compite.</p>
+<hr />
+<h2 id="3-requisitos">3. Requisitos</h2>
+<h3 id="31-funcionales">3.1 Funcionales</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Requisito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td>El sistema detecta el <strong>marcador ArUco del equipo</strong> (posición y orientación) en video en vivo.</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>El carro navega <strong>de forma autónoma</strong> a un objetivo y se detiene (N1).</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>El sistema detecta la <strong>pelota por color</strong> (segmentación HSV del Tema 4; la pelota no lleva marcador).</td>
+</tr>
+<tr>
+<td>R4</td>
+<td><strong>Cero intervención humana</strong> en modo autónomo: manos fuera del teclado durante el juego, salvo los rescates permitidos por reglamento.</td>
+</tr>
+<tr>
+<td>R5</td>
+<td>El <strong>failsafe</strong> del Proyecto 1 sigue activo: sin comandos en ≤1 s → alto total. Se prueba en vivo cerrando el script.</td>
+</tr>
+<tr>
+<td>R6</td>
+<td><strong>Paro desde la PC</strong>: una tecla detiene el carro de inmediato (además del failsafe).</td>
+</tr>
+<tr>
+<td>R7</td>
+<td>El <strong>marcador</strong> va montado plano y horizontal sobre el carro: ≥5 cm por lado, con su borde blanco, borde superior del patrón apuntando al frente.</td>
+</tr>
+<tr>
+<td>R8</td>
+<td>Parámetros documentados: ganancias PID finales, rangos HSV de la pelota, FPS y latencia medidos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-marcadores-asignados">3.2 Marcadores asignados</h3>
+<table>
+<thead>
+<tr>
+<th>Equipo</th>
+<th>ID ArUco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grupo A — Equipos 1 a 4</td>
+<td><strong>1, 2, 3, 4</strong></td>
+</tr>
+<tr>
+<td>Grupo B — Equipos 5 a 8</td>
+<td><strong>5, 6, 7, 8</strong></td>
+</tr>
+<tr>
+<td>Objetivo de pruebas (todos)</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Diccionario: <code>DICT_4X4_50</code>. Genera los tuyos con el script del Tema 6. En cancha compartida, tu software debe <strong>ignorar los IDs ajenos</strong> (el rival estará ahí — filtra por tu ID).</p>
+<h3 id="33-restricciones">3.3 Restricciones</h3>
+<ul>
+<li>Mismo hardware base del Proyecto 1 (ESP32 clásico, TB6612, huella ≤ 20 × 20 cm). Se permiten mejoras mecánicas (empujador, ruedas) dentro de la huella.</li>
+<li><strong>Pelota:</strong> pelota de golf naranja (estándar VSSS) — o la que se defina en el kickoff según disponibilidad; el color se anuncia con tiempo para calibrar.</li>
+<li><strong>Cámara:</strong> la estructura sobre la cancha admite <strong>una cámara por equipo</strong> (webcam o celular-como-webcam), cada una conectada a la laptop de su equipo. Para desarrollar en casa: cualquier cámara sobre cualquier "cancha" improvisada sirve — los píxeles no saben de canchas oficiales.</li>
+<li><strong>Software:</strong> todo corre en la laptop del equipo. Librerías libres (OpenCV, NumPy, pySerial). El código es suyo y deben poder explicarlo línea por línea.</li>
+</ul>
+<hr />
+<h2 id="4-hitos-y-entregables">4. Hitos y entregables</h2>
+<h3 id="sesion-15-kickoff-en-clase">Sesión 15 — Kickoff (en clase)</h3>
+<ul>
+<li><strong>Propuesta (1–2 páginas):</strong> nivel objetivo (sean honestos y ambiciosos), plan de pruebas por <strong>sprints semanales</strong> con criterio de éxito medible por sprint ("sprint 1: N1 en cancha de casa"), y riesgos con plan B.</li>
+<li><strong>Checklist de cirugía del carro:</strong> qué hay que reparar/mejorar del Proyecto 1.</li>
+</ul>
+<h3 id="sesion-16-revision-de-avance-en-clase">Sesión 16 — Revisión de avance (en clase)</h3>
+<ul>
+<li><strong>Demo mínima N1</strong>: el carro llega a un marcador objetivo y se detiene, en vivo.</li>
+<li><strong>Bitácora al día</strong>: juegos de ganancias probados, mediciones de FPS/latencia, fallas y soluciones.</li>
+<li><strong>Defensa oral breve</strong> (3–5 min): cualquier integrante explica cualquier parte — incluyendo el código de visión.</li>
+<li>Esta sesión es también el <strong>colchón</strong>: tiempo en clase para destrabar con ayuda del docente.</li>
+</ul>
+<h3 id="sesion-17-entrega-torneo-en-clase">Sesión 17 — Entrega + Torneo (en clase)</h3>
+<ul>
+<li><strong>Demostración con rúbrica</strong> del nivel alcanzado (N3 se cronometra; N1–N2 igual, con sus criterios).</li>
+<li><strong>Torneo VSSS inter-grupos</strong> (equipos con N2+).</li>
+<li><strong>Repositorio final</strong>: código comentado (firmware + visión), parámetros (R8), README de operación.</li>
+<li><strong>Portafolio publicado</strong> en su versión final, con el video del proyecto.</li>
+<li><strong>Reflexión individual (1 página):</strong> qué construiste, qué aprendiste de ti, impacto social de esta tecnología, y tu siguiente paso (¿semillero LARC?).</li>
+</ul>
+<hr />
+<h2 id="5-el-torneo-vsss-inter-grupos">5. El torneo · VSSS inter-grupos</h2>
+<p><strong>Llave:</strong> eliminación directa de 8, <strong>sembrada con las posiciones del torneo del Proyecto 1</strong>: 1°A vs 4°B, 2°A vs 3°B, 3°A vs 2°B, 4°A vs 1°B. Si algún equipo no alcanza N2, su rival avanza y el equipo hace su demo de nivel en el espacio del partido.</p>
+<p><strong>Partidos</strong></p>
+<ul>
+<li>1v1 autónomo, dos tiempos de <strong>2 minutos</strong> con cambio de cancha.</li>
+<li>Arranque: cada carro en su media cancha, pelota al centro, y a la cuenta del árbitro cada equipo presiona <strong>una sola tecla</strong> para soltar a su robot. De ahí en adelante, <strong>manos fuera</strong>.</li>
+<li><strong>Gol:</strong> la pelota cruza completamente la línea de portería. Tras gol, se reinicia al centro.</li>
+</ul>
+<p><strong>Reglas de autonomía y rescates</strong></p>
+<ul>
+<li><strong>Rescate:</strong> si un carro queda volcado, atorado o su software murió, el equipo pide rescate al árbitro; puede acomodarlo con la mano en su media cancha y relanzar su script. Máximo <strong>2 rescates por tiempo</strong>; el reloj no se detiene.</li>
+<li><strong>Pelota muerta:</strong> si la pelota queda atorada en esquina o pared por más de 10 s sin que nadie la mueva, el árbitro la recoloca al centro.</li>
+<li><strong>Ambos inertes:</strong> si ningún carro toca la pelota en 30 s, se reinicia la jugada al centro.</li>
+<li><strong>Empate en la llave:</strong> muerte súbita de 1 minuto; si persiste, gana quien haya usado menos rescates; si persiste, tanda de "penales": gol a portería vacía cronometrado, gana el más rápido.</li>
+<li>El árbitro (docente) tiene la última palabra.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Igual que en el Proyecto 1: ganar da gloria, no décimas</p>
+<p>La rúbrica premia presentarse con un sistema funcional del mayor nivel posible y operarlo con limpieza. El campeón inter-grupos se lleva el reconocimiento — y el primer lugar en la lista del semillero para armar un equipo <strong>LARC VSSS real</strong> de la universidad, si le interesa.</p>
+</div>
+<hr />
+<h2 id="6-rubrica-de-evaluacion-100-pts-25-del-curso">6. Rúbrica de evaluación (100 pts → 25 % del curso)</h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Pts</th>
+<th>Qué se evalúa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Funcionamiento por nivel</strong></td>
+<td>35</td>
+<td>N1 = 15 · N2 = 25 · N3 = 30 · N4 = 35. Se otorgan los puntos del nivel <strong>demostrado en vivo</strong> el día de la entrega (acumulativo).</td>
+</tr>
+<tr>
+<td><strong>Robustez e integración</strong></td>
+<td>15</td>
+<td>R4–R7: autonomía real, failsafe y paro probados, marcador bien montado, sistema que sobrevive a la sesión completa sin cirugía de emergencia.</td>
+</tr>
+<tr>
+<td><strong>Documentación y proceso</strong></td>
+<td>20</td>
+<td>Bitácora con juegos de ganancias y mediciones (R8), commits distribuidos en el tiempo, repositorio completo, portafolio final publicado.</td>
+</tr>
+<tr>
+<td><strong>Defensa oral</strong></td>
+<td>15</td>
+<td>Sesiones 16 y 17: cualquier integrante explica cualquier parte (visión, control, firmware). No poder explicar el propio trabajo invalida la evidencia correspondiente.</td>
+</tr>
+<tr>
+<td><strong>Torneo / demo final</strong></td>
+<td>15</td>
+<td>Presentarse listos y a tiempo (7); operar con limpieza el partido o la demo de nivel: arranque de una tecla, rescates dentro de regla, actitud deportiva (8).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Penalizaciones:</strong> entrega tardía según política del syllabus (máx. 8.0 hasta 7 días). La <strong>reflexión individual</strong> es personal: no entregarla descuenta 10 pts <em>a ese integrante</em>, no al equipo.</p>
+<p><strong>Uso de IA:</strong> aplica la política del curso — permitida como herramienta declarando dónde se usó; evidencias propias; todo defendible oralmente. En este proyecto la defensa incluye el código de visión: "lo generó una IA y no sé qué hace" invalida el criterio de defensa.</p>
+<hr />
+<h2 id="7-consejos-de-veteranos">7. Consejos de veteranos</h2>
+<ul>
+<li><strong>Sintonicen el giro primero, con el avance en cero</strong> (Tema 6). El 80 % de los carros que "bailan" alrededor de la pelota tienen el Kp de giro alto y nunca lo aislaron.</li>
+<li><strong>Midan la latencia antes de culpar al PID.</strong> Si el lazo completo tarda 200 ms, ningún juego de ganancias los salvará de oscilar; bajen resolución y suban luz.</li>
+<li><strong>La luz del día del torneo no es la de su casa.</strong> Lleguen temprano a recalibrar los rangos HSV de la pelota — el ArUco aguanta, el color no.</li>
+<li><strong>El punto de aproximación es la diferencia entre N2 y N3</strong>: llegar a la pelota por el lado equivocado la mete en su propia portería. Relean el reto 3 del Tema 6; es cambiar qué punto le pasan al PID.</li>
+<li><strong>Guarden una versión que funciona.</strong> Antes de "mejorar" el código la noche anterior, hagan commit y tag de la versión estable. El torneo se juega con la versión que sirve, no con la que casi sirve.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
